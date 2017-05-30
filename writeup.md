@@ -15,7 +15,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image0]: ./test_images_pipeline/pipeline_0.jpg "Self driving car front camera view"
+[image1]: ./test_images_pipeline/pipeline_1.jpg "Grayscale"
+[image2]: ./test_images_pipeline/pipeline_2.jpg "Gaussian blur"
+[image3]: ./test_images_pipeline/pipeline_3.jpg "Canny edge"
+[image4]: ./test_images_pipeline/pipeline_4.jpg "Mask region"
+[image5]: ./test_images_pipeline/pipeline_5.jpg "Hough transform, averaging and extrapolation"
+[image6]: ./test_images_pipeline/pipeline_6.jpg "Overlay of detected lines on the original camera view"
 
 ---
 
@@ -29,19 +35,31 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 To demonstrate how the pipeline works first we look at the original image: 
 
-![alt text][image1]
+![alt text][image0]
 
 Then after applying the grayscale step:
 
+![alt text][image1]
+
 The gaussian blur:
+
+![alt text][image2]
 
 Canny edge:
 
+![alt text][image3]
+
 Mask:
+
+![alt text][image4]
 
 Hough transform and averaging:
 
+![alt text][image5]
+
 Overlay on the original image:
+
+![alt text][image6]
 
 ### 2. Identify potential shortcomings with your current pipeline
 
