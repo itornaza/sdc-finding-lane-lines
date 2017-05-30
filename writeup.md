@@ -1,8 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+## Ioannis Tornazakis
 
 ---
 
@@ -12,12 +10,8 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
 [//]: # (Image References)
-
-![](images/image.png)
-
-[image0]: ./test_images_pipeline/pipeline_0.jpg "Self driving car front camera view"
+[image0]: ./test_images_pipeline/pipeline_0.jpg | width = 200 "Self driving car front camera view"
 [image1]: ./test_images_pipeline/pipeline_1.jpg "Grayscale"
 [image2]: ./test_images_pipeline/pipeline_2.jpg "Gaussian blur"
 [image3]: ./test_images_pipeline/pipeline_3.jpg "Canny edge"
@@ -29,7 +23,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Describe of the pipeline. and a brief explanation for modifications on the draw_lines() function.
 
 My pipeline consists of 6 steps. First, I convert the image to grayscale, then I apply a gaussian blur filter. The resulted more smooth grayscale image is now pushed into canny edge filter in order to get clear line segments that can be further processed. To exclude unwanted lines I further apply a region masking on the image to get only the lines of interest. That means that only lines that are in a more narrow area in front of the car are taken into consideration. Then this masked image is subjected to Hough transformation in order to detect the actual lane line segments on the road, either if they are continuous or not and no matter their color. During the hough transform the lines are averaged and extrapolated so they can be seen as two continuous red lines that overlay the lane lines. In the end, I overlay the detected lanes over the original image to provide a usable result.
 
@@ -39,39 +33,38 @@ To demonstrate how the pipeline works first we look at the original image:
 
 ![alt text][image0]
 
-Then after applying the grayscale step:
+Stage 1 - Grayscale
 
 ![alt text][image1]
 
-The gaussian blur:
+Stage 2 - Gaussian blur
 
 ![alt text][image2]
 
-Canny edge:
+Stage 3 - Canny edge
 
 ![alt text][image3]
 
-Mask:
+Stage 4 - Mask region
 
 ![alt text][image4]
 
-Hough transform and averaging:
+Stage 5 - Hough transform and averaging
 
 ![alt text][image5]
 
-Overlay on the original image:
+Stage 6 - Overlay on the original image
 
 ![alt text][image6]
 
-### 2. Identify potential shortcomings with your current pipeline
-
+### 2. Potential shortcomings with my current pipeline implementation
 
 One potential shortcoming would be what would happen when the lines are curved like on a road turn. Then the linear lines that I currently use will be enadequate to handle the situation.
 
 Another shortcoming could be if another vehicle is taking over and is on a line segment in front of our car. Then the line would be desrupted and might cause problems in my line detection algorithm.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Suggest possible improvements to the pipeline
 
 A possible improvement would be to improve on the line averaging by using polynomial functions to detect curved lines.
 
