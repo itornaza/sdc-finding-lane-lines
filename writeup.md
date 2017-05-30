@@ -15,13 +15,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image0]: ../test_images_pipeline/pipeline_0.jpg "Self driving car front camera view"
-[image1]: ../test_images_pipeline/pipeline_1.jpg "Grayscale"
-[image2]: ../test_images_pipeline/pipeline_2.jpg "Gaussian blur"
-[image3]: ../test_images_pipeline/pipeline_3.jpg "Canny edge"
-[image4]: ../test_images_pipeline/pipeline_4.jpg "Mask region"
-[image5]: ../test_images_pipeline/pipeline_5.jpg "Hough transform, averaging and extrapolation"
-[image6]: ../test_images_pipeline/pipeline_6.jpg "Overlay of detected lines on the original camera view"
+[image0]: test_images_pipeline/pipeline_0.jpg "Self driving car front camera view"
+[image1]: test_images_pipeline/pipeline_1.jpg "Grayscale"
+[image2]: test_images_pipeline/pipeline_2.jpg "Gaussian blur"
+[image3]: test_images_pipeline/pipeline_3.jpg "Canny edge"
+[image4]: test_images_pipeline/pipeline_4.jpg "Mask region"
+[image5]: test_images_pipeline/pipeline_5.jpg "Hough transform, averaging and extrapolation"
+[image6]: test_images_pipeline/pipeline_6.jpg "Overlay of detected lines on the original camera view"
 
 ---
 
