@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 * Reflect on your work in a written report
 
 [//]: # (Image References)
-[image0]: (./test_images_pipeline/pipeline_0.jpg | width = 200) "Self driving car front camera view"
+[image0]: ./test_images_pipeline/pipeline_0.jpg "Self driving car front camera view"
 [image1]: ./test_images_pipeline/pipeline_1.jpg "Grayscale"
 [image2]: ./test_images_pipeline/pipeline_2.jpg "Gaussian blur"
 [image3]: ./test_images_pipeline/pipeline_3.jpg "Canny edge"
