@@ -1,6 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Ioannis Tornazakis
+Identifies lane lines on the road, in an image, and in a video stream using a python notebook
 
 [//]: # (Image References)
 [image0]: ./test_images_pipeline/pipeline_0.jpg "Self driving car front camera view"
