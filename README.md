@@ -1,4 +1,4 @@
-# **Finding Lane Lines on the Road** 
+# Finding Lane Lines on the Road
 
 Identifies lane lines on the road, in an image, and in a video stream using a python notebook
 
@@ -11,7 +11,16 @@ Identifies lane lines on the road, in an image, and in a video stream using a py
 [image5]: ./test_images_pipeline/pipeline_5.jpg "Hough transform, averaging and extrapolation"
 [image6]: ./test_images_pipeline/pipeline_6.jpg "Overlay of detected lines on the original camera view"
 
-### Reflection
+## Installation
+
+Set up the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md)
+
+Go to the root of the project and run the following on the terminal:
+
+`source activate carnd-term1`
+`jupiter notebook`
+
+## Reflection
 
 ### 1. Description of the pipeline and a brief explanation for modifications on the draw_lines() function.
 
