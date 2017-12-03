@@ -24,15 +24,15 @@ $ jupiter notebook
 ```
 ## Reflection
 
-### 1. Description of the pipeline and a brief explanation for modifications on the draw_lines() function.
+### 1. Description of the pipeline and a brief explanation for modifications on the `draw_lines()` function.
 
 My pipeline consists of 6 steps. First, I convert the original image from the self driving car from camera view to grayscale, then I apply a gaussian blur filter. The resulted more smooth grayscale image is now pushed into canny edge filter in order to get clear line segments that can be further processed. To exclude unwanted lines I further apply a region masking on the image to get only the lines at the area interest. That means that only lines that are in a more narrow area in front of the car are taken into consideration. Then, this masked image is subjected to Hough transformation in order to detect the actual lane line segments on the road, either if they are continuous or not and no matter their color. Along wit the Hough transform the lines are averaged and extrapolated so they can be seen as two continuous red lines that overlay the lane lines. In the end, I overlay the detected lanes over the original image to provide a usable result.
 
-In order to draw a single line for the left and right lanes, I modified the draw_lines() function by first distinguishing between left and right lines. This can be done in many ways, so I chose to classsify them using the slope of the lines given by the formula:
+In order to draw a single line for the left and right lanes, I modified the `draw_lines()` function by first distinguishing between left and right lines. This can be done in many ways, so I chose to classsify them using the slope of the lines given by the formula:
 
 ![img](http://latex.codecogs.com/svg.latex?m%20%3D%20%5Cfrac%7By2-y1%7D%7Bx2-x1%7D)
 
-In essence, the left and right lines have opposite slopes. To get the slopes correctly I consider that the X-Y axis origin lies at the top-left corner of the image. In this way, the left line has a negative slope as we conceptualy convert the origin to the bottom-left corner. After the left and right lines are distinguished, I collect the (x, y) datapoints for each line to further process them. Using the np.polifit() function I get an averaged line and then through the `np.polu1d()` function I get the lines' ![img](http://latex.codecogs.com/svg.latex?y%20%3D%20m*x%20%2B%20b) equation. I then use this equation to compute the begining and the end of each line that are finally plotted on the image.
+In essence, the left and right lines have opposite slopes. To get the slopes correctly I consider that the X-Y axis origin lies at the top-left corner of the image. In this way, the left line has a negative slope as we conceptualy convert the origin to the bottom-left corner. After the left and right lines are distinguished, I collect the (x, y) datapoints for each line to further process them. Using the `np.polifit()` function I get an averaged line and then through the `np.polu1d()` function I get the lines' ![img](http://latex.codecogs.com/svg.latex?y%20%3D%20m*x%20%2B%20b) equation. I then use this equation to compute the begining and the end of each line that are finally plotted on the image.
 
 **Stage 0 - Original image from the front camera view** 
 
