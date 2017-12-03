@@ -76,7 +76,7 @@ In essence, the left and right lines have opposite slopes. To get the slopes cor
 
 - Another shortcoming could be if another vehicle is taking over and is on a line segment in front of our car. Then the line would be desrupted and might cause problems in my detection pipeline.
 
-## Suggest possible improvements to the pipeline
+## Possible future improvements to the pipeline
 
 - A possible improvement would be to improve on the line averaging by using higher order polynomial functions to detect curved lines.
 
