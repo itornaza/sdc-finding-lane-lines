@@ -66,9 +66,9 @@ In essence, the left and right lines have opposite slopes. To get the slopes cor
 
 ## Results
 
-The pipeline was applied on the images found at `./test_images` and the processed images with the annotated lane lines detected by the pipeline can be found at `./test_images_output` directory.
+- The pipeline was applied on the images found at `./test_images` and the processed images with the annotated lane lines detected by the pipeline can be found at `./test_images_output` directory.
 
-The pipeline was applied on the videos found at `./test_videos` and the processed videos with the annotated lane lines detected by the pipeline can be found at `./test_videos_output` directory.
+- The pipeline was applied on the videos found at `./test_videos` and the processed videos with the annotated lane lines detected by the pipeline can be found at `./test_videos_output` directory.
 
 ## Potential shortcomings with my current pipeline implementation
 
