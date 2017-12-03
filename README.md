@@ -64,12 +64,12 @@ In essence, the left and right lines have opposite slopes. To get the slopes cor
 
 ### 2. Potential shortcomings with my current pipeline implementation
 
-One potential shortcoming would be if the lines are curved like on a road turn. Then the straight lines that I currently use will be enadequate to handle the situation.
+- One potential shortcoming would be if the lines are curved like on a road turn. Then the straight lines that I currently use will be enadequate to handle the situation.
 
-Another shortcoming could be if another vehicle is taking over and is on a line segment in front of our car. Then the line would be desrupted and might cause problems in my detection pipeline.
+- Another shortcoming could be if another vehicle is taking over and is on a line segment in front of our car. Then the line would be desrupted and might cause problems in my detection pipeline.
 
 ### 3. Suggest possible improvements to the pipeline
 
-A possible improvement would be to improve on the line averaging by using higher order polynomial functions to detect curved lines.
+- A possible improvement would be to improve on the line averaging by using higher order polynomial functions to detect curved lines.
 
-Another potential improvement could be to minimize the flickering of the lines on a video stream. This may be handled by frame averaging on the video.
+- Another potential improvement could be to minimize the flickering of the lines on a video stream. This may be handled by frame averaging on the video.
